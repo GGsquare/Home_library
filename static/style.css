@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(199, 199, 199);
+    text-align:"center";
+}
+h1 {
+    font-size: 45px;
+    color: rgb(100, 100, 100);
+    font-weight: bold;
+    background-color: hsl(0, 0%, 90%);
+    text-align:"center";
+}
+
+h2 {
+    color: blue; 
+    font-size: 40px;
+}
+p {
+    color:rgb(150, 0, 0);
+    font-size: 45px;
+}
+form {
+    color:rgb(255, 255, 255);
+    font-size: 20px;
+}
+th{
+    color:rgb(209, 76, 52)
+}
+label{
+    color:rgb(0, 0, 0)
+}

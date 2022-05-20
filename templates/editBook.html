@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<form action="{{ url_for('editBook',book_id = book.id)}}" method="post">
+    <div class="form-group">
+      <label for="name">Tytuł:</label>
+      <input type="text" class="form-control" name="name" value="{{book.title }}">
+      <button type="submit"> Zmień</button>
+    </div>
+  </form>
+  <a href="{{url_for('showBooks')}}">
+    <button> Wróć </button>
+  </a>
+  <a href="{{url_for('deleteBook', book_id = book.id )}}" style="margin-left: 10px;">
+    <button type="submit"> Usuń </button>
+  </a>

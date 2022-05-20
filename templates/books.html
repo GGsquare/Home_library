@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Domowa biblioteka</title>
+    <style>
+        table,
+        th,
+        tr,
+        td {
+            border: 2px solid rgb(5, 5, 5);
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><p align="center">Lista książek</p></h1>
+
+    <table align="center">
+        <thead>
+            <th>Numer</th>
+            <th>Tytuł</th>
+            <th>Autor</th>
+            <th>Czy jest na półce?</th>
+        </thead>
+        {% for book in books %}
+        <tr>
+            <td><a href="/books/{{ loop.index }}">{{ book.id}}</a></td>
+            <td>{{ book.title }}</td>
+            <td>{{ book.author }}</td>
+            <td>{{ book.genre }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="{{url_for('newBook')}}">
+        <p align="center"><button>Dodaj nową książkę</button></p>
+    </a>
+</body>
+
+</html>

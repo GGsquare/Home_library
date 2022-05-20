@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<h1><p align="center">Dodaj książkę</p></h1>
+<form action="#" method="post">
+   <div class="form-group">
+       <label for="name">Tytuł:</label>
+       <input type="text" maxlength="100" name="name">
+
+       <label for="author">Autor:</label>
+       <input maxlength="100" name="author">
+
+       <label for="genre">Czy jest na półce?:</label>
+       <input maxlength="100" name="genre">
+
+       <button type="submit">Dodaj</button>
+   </div>
+</form>
